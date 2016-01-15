@@ -72,28 +72,28 @@ CMakeFiles/ModelDicGen.dir/mainMod.cpp.o.provides: CMakeFiles/ModelDicGen.dir/ma
 
 CMakeFiles/ModelDicGen.dir/mainMod.cpp.o.provides.build: CMakeFiles/ModelDicGen.dir/mainMod.cpp.o
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.o: CMakeFiles/ModelDicGen.dir/flags.make
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.o: ../filterbank.cpp
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o: CMakeFiles/ModelDicGen.dir/flags.make
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o: /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ModelDicGen.dir/filterbank.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ModelDicGen.dir/filterbank.cpp.o -c /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/filterbank.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o -c /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModelDicGen.dir/filterbank.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/filterbank.cpp > CMakeFiles/ModelDicGen.dir/filterbank.cpp.i
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp > CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.i
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModelDicGen.dir/filterbank.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/filterbank.cpp -o CMakeFiles/ModelDicGen.dir/filterbank.cpp.s
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp -o CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.s
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.requires:
-.PHONY : CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.requires
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.requires:
+.PHONY : CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.requires
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.provides: CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ModelDicGen.dir/build.make CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.provides.build
-.PHONY : CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.provides
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.provides: CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ModelDicGen.dir/build.make CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.provides.build
+.PHONY : CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.provides
 
-CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.provides.build: CMakeFiles/ModelDicGen.dir/filterbank.cpp.o
+CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.provides.build: CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o
 
 CMakeFiles/ModelDicGen.dir/imgCollection.cpp.o: CMakeFiles/ModelDicGen.dir/flags.make
 CMakeFiles/ModelDicGen.dir/imgCollection.cpp.o: ../imgCollection.cpp
@@ -190,7 +190,7 @@ CMakeFiles/ModelDicGen.dir/dictCreation.cpp.o.provides.build: CMakeFiles/ModelDi
 # Object files for target ModelDicGen
 ModelDicGen_OBJECTS = \
 "CMakeFiles/ModelDicGen.dir/mainMod.cpp.o" \
-"CMakeFiles/ModelDicGen.dir/filterbank.cpp.o" \
+"CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o" \
 "CMakeFiles/ModelDicGen.dir/imgCollection.cpp.o" \
 "CMakeFiles/ModelDicGen.dir/modelBuild.cpp.o" \
 "CMakeFiles/ModelDicGen.dir/imgFunctions.cpp.o" \
@@ -200,7 +200,7 @@ ModelDicGen_OBJECTS = \
 ModelDicGen_EXTERNAL_OBJECTS =
 
 ModelDicGen: CMakeFiles/ModelDicGen.dir/mainMod.cpp.o
-ModelDicGen: CMakeFiles/ModelDicGen.dir/filterbank.cpp.o
+ModelDicGen: CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o
 ModelDicGen: CMakeFiles/ModelDicGen.dir/imgCollection.cpp.o
 ModelDicGen: CMakeFiles/ModelDicGen.dir/modelBuild.cpp.o
 ModelDicGen: CMakeFiles/ModelDicGen.dir/imgFunctions.cpp.o
@@ -244,7 +244,7 @@ CMakeFiles/ModelDicGen.dir/build: ModelDicGen
 .PHONY : CMakeFiles/ModelDicGen.dir/build
 
 CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/mainMod.cpp.o.requires
-CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/filterbank.cpp.o.requires
+CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.cpp.o.requires
 CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/imgCollection.cpp.o.requires
 CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/modelBuild.cpp.o.requires
 CMakeFiles/ModelDicGen.dir/requires: CMakeFiles/ModelDicGen.dir/imgFunctions.cpp.o.requires

@@ -6,11 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/dictCreation.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.h
 
-/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/mainMod.cpp
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/dictCreation.cpp
 opencv2/highgui/highgui.hpp
 /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/opencv2/imgproc/imgproc.hpp
 opencv2/opencv.hpp
 -
 opencv2/core/core.hpp
@@ -19,22 +21,38 @@ iostream
 -
 stdio.h
 -
+stdlib.h
+-
+fstream
+-
 string
+-
+unistd.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+algorithm
 -
 boost/filesystem.hpp
 -
 assert.h
 -
-chrono
+map
 -
-thread
--
-dictCreation.h
-/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/dictCreation.h
-modelBuild.h
-/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/modelBuild.h
+../Headers/filterbank.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.h
+imgCollection.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgCollection.h
+imgFunctions.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgFunctions.h
 
-/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/modelBuild.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgCollection.h
+boost/filesystem.hpp
+-
+
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgFunctions.h
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h
@@ -383,6 +401,10 @@ opencv2/highgui.hpp
 /usr/local/include/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
 /usr/local/include/opencv2/opencv2/imgproc/imgproc_c.h
+
+/usr/local/include/opencv2/imgproc/imgproc.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv2/imgproc/opencv2/imgproc.hpp
 
 /usr/local/include/opencv2/imgproc/imgproc_c.h
 opencv2/imgproc/types_c.h

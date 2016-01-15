@@ -16,7 +16,7 @@
 #include <assert.h>
 #include <map>
 
-#include "filterbank.h"
+#include "../Headers/filterbank.h"
 #include "imgCollection.h"
 #include "imgFunctions.h"
 

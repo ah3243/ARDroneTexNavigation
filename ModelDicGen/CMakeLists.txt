@@ -7,7 +7,7 @@ FIND_PACKAGE(Boost COMPONENTS system filesystem REQUIRED)
 if(Boost_FOUND)
   INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
-  ADD_EXECUTABLE(${PROJECT_NAME} ./mainMod.cpp ./filterbank.h ./filterbank.cpp
+  ADD_EXECUTABLE(${PROJECT_NAME} ./mainMod.cpp ../Headers/filterbank.h ../Headers/filterbank.cpp
   ./imgCollection.cpp ./imgCollection.h ./modelBuild.cpp ./modelBuild.h
   ./imgFunctions.cpp ./imgFunctions.h ./dictCreation.cpp ./dictCreation.h)
 
@@ -19,3 +19,4 @@ if(Boost_FOUND)
     )
   ADD_DEFINITIONS(-std=c++11)
 endif()
+  

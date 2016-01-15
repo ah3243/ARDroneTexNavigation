@@ -17,7 +17,7 @@
 #include <map>
 #include <numeric> // For getting average texton distance
 
-#include "filterbank.h" // Filterbank Handling Functions
+#include "../Headers/filterbank.h" // Filterbank Handling Functions
 #include "imgCollection.h" // Img Import Functions
 #include "imgFunctions.h" // img cropping and handling functions
 
