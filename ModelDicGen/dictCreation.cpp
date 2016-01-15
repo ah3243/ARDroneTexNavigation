@@ -100,7 +100,7 @@ void filterImgs(map<string, vector<Mat> > imgs, map<string, vector<Mat> > &filte
   }
 }
 
-void dictCreateHandler(int cropsize, int scale, int numClusters, int flags, int attempts, int kmeansIteration, double kmeansEpsilon, int overlap){
+void dictCreateHandler(int cropsize, int scale, int numClusters, int flags, int attempts, int kmeansIteration, double kmeansEpsilon){
   // TermCriteria tc(TermCriteria::MAX_ITER + TermCriteria::EPS, kmeansIteration, kmeansEpsilon);
   TermCriteria tc(TermCriteria::MAX_ITER, kmeansIteration, kmeansEpsilon);
   BOWKMeansTrainer bowTrainer(numClusters, tc, attempts, flags);
@@ -123,6 +123,11 @@ void dictCreateHandler(int cropsize, int scale, int numClusters, int flags, int 
       // Segment the 200x200pixel image
       vector<Mat> test;
       int MISSTOPLEFT_RIGHT=0;
+
+// ------ REMOVE ME ------ //
+      int overlap =0;
+// ------ REMOVE ME ------ //
+
       segmentImg(test, curImg, cropsize, overlap, MISSTOPLEFT_RIGHT);
       dicDEBUG("after segmenation: ", test.size());
       // Push each saved Mat to bowTrainer

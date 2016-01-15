@@ -94,7 +94,7 @@ void quickSegment(Mat in, vector<Mat> &out, int cropsize){
 }
 
 void modelBuildHandle(int cropsize, int scale, int numClusters, int flags, int attempts, int kmeansIteration,
-  double kmeansEpsilon, int overlap, int modelRepeats){
+  double kmeansEpsilon, int modelRepeats){
   // Load TextonDictionary
   Mat dictionary;
   vector<float> m;
@@ -182,6 +182,12 @@ void modelBuildHandle(int cropsize, int scale, int numClusters, int flags, int a
       // Segment and flatten the image then push each single column Mat onto a vector
       vector<Mat> test;
       int MISSTOPLEFT_RIGHT = 0;
+
+  // ---- REMOVE ME --- //
+  int overlap = 0;
+  // ---- REMOVE ME --- //
+
+
       segmentImg(test, hold, cropsize, overlap, MISSTOPLEFT_RIGHT);
 
       // Object to store segments from single iteration in for clustering
