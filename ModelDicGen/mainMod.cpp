@@ -7,11 +7,11 @@
 #include <stdio.h> // General io
 #include <boost/filesystem.hpp> // For image dir path
 
-#include "dictCreation.h" // Generate and store Texton Dictionary
-#include "modelBuild.h" // Generate models from class images
+// Headers //
+  #include "dictCreation.h" // Generate and store Texton Dictionary
+  #include "modelBuild.h" // Generate models from class images
 
-#define VERBOSE 0
-
+// Flags to active dictionary or model generation independently
 #define DICTIONARY_BUILD 1
 #define MODEL_BUILD 1
 
@@ -71,7 +71,7 @@ int main( int argc, char** argv ){
 
     cout << "\n.......Generating Texton Dictionary...... \n" ;
 
-    dictCreateHandler(cropsize, scale, DictSize, flags, attempts, kmeansIteration, kmeansEpsilon);
+    dictCreateHandler(cropsize, scale, DictSize, flags, attempts, kmeansIteration, kmeansEpsilon, textonPath);
 
   #endif
 

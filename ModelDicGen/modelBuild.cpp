@@ -181,14 +181,14 @@ void modelBuildHandle(int cropsize, int scale, int numClusters, int flags, int a
 
       // Segment and flatten the image then push each single column Mat onto a vector
       vector<Mat> test;
-      int MISSTOPLEFT_RIGHT = 0;
 
   // ---- REMOVE ME --- //
+  int MISSTOPLEFT_RIGHT = 0;
   int overlap = 0;
   // ---- REMOVE ME --- //
 
 
-      segmentImg(test, hold, cropsize, overlap, MISSTOPLEFT_RIGHT);
+      segmentImg(test, hold, cropsize);
 
       // Object to store segments from single iteration in for clustering
       BOWKMeansTrainer classTrainer(numClusters, clsTc, attempts, flags);

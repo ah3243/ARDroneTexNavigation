@@ -6,7 +6,33 @@
 
 #IncludeRegexTransform: 
 
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.h
+
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/dictCreation.cpp
+opencv2/opencv.hpp
+-
+opencv2/core/core.hpp
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/opencv2/core/core.hpp
+iostream
+-
+stdio.h
+-
+map
+-
+../Headers/filterbank.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/Headers/filterbank.h
+imgCollection.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgCollection.h
+imgFunctions.h
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgFunctions.h
+
 /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/dictCreation.h
+
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgCollection.h
+boost/filesystem.hpp
+-
+
+/home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/imgFunctions.h
 
 /home/james-tt/Desktop/MyFilterbankCode/OpenCvPrograms/ModelDicGen/mainMod.cpp
 opencv2/core/core.hpp

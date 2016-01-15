@@ -44,20 +44,6 @@ int createDir(string pathNme){
   return 0;
 }
 
-Mat reshapeCol(Mat in){
-  Mat points(in.rows*in.cols, 1,CV_32F);
-  int cnt = 0;
-//  cout << "inside. These are the rows: " <<  in.rows << " and cols: " << in.cols  << endl;
-  for(int i =0;i<in.cols;i++){
-//    cout << "outer loop: " << i << endl;
-    for(int j=0;j<in.rows;j++){
-      points.at<float>(cnt, 0) = in.at<Vec3b>(i,j)[0];
-      cnt++;
-    }
-  }
-  return points;
-}
-
 void getDictionary(Mat &dictionary, vector<float> &m){
   // Load TextonDictionary
   FileStorage fs("dictionary.xml",FileStorage::READ);
@@ -101,65 +87,81 @@ int getClassHist(map<string, vector<Mat> >& savedClassHist){
   return serial;
 }
 
+// Flatten segment and return for clustering
+Mat reshapeCol(Mat in){
+
+  // Loop through and copy Matrix to 1d Matrix
+  Mat points(in.rows*in.cols, 1,CV_32F);
+  int cnt = 0;
+  for(int i =0;i<in.cols;i++){
+    for(int j=0;j<in.rows;j++){
+      points.at<float>(cnt, 0) = in.at<Vec3b>(i,j)[0];
+      cnt++;
+    }
+  }
+
+  return points;
+}
+
 // Segment input image and return in vector
-void segmentImg(vector<Mat>& out, Mat in, int cropsize, int overlap, int MISSTOPLEFT_RIGHT){
+void segmentImg(vector<Mat>& out, Mat in, int cropsize){
 
-  // Calculate the maximum number of segments for the given img+cropsize
-  int NumColSegments = (in.cols/cropsize);
-  int NumRowSegments = (in.rows/cropsize);
-  int NumSegmentsTotal = (NumColSegments*NumRowSegments);
+  //  If debug is true print out/show //
+    stringstream ss;
+    ss << "entering segmentImg this is the img rows: ";
+    ss << in.rows << " cols: " << in.cols;
+    imgFDEBUG(ss.str(), 0);
 
-  if(NumSegmentsTotal!=6){
-    MISSTOPLEFT_RIGHT=0;
-  }
+    if(SHOWSEGMENTS){
+      imshow("Whole Image", in);
+    }
 
-  // Calculate gap around the combined segments
-  int colspace = (in.cols -(NumColSegments*cropsize))/2;
-  int rowspace = (in.rows -(NumRowSegments*cropsize))/2;
+  // Calculate the maximum number of segments for the given img+cropsize //
+    int NumColSegments = (in.cols/cropsize);
+    int NumRowSegments = (in.rows/cropsize);
+    int NumSegmentsTotal = (NumColSegments*NumRowSegments);
 
-  // Make sure manual offset and cropsize are compatible with imagesize
-  if((cropsize+rowspace)>in.rows || (cropsize+colspace)>in.cols){
-    ERR("cropsize larger than input image. Exiting");
-    exit(1);
-  }
-
-  stringstream ss;
-  ss << "entering segmentImg this is the img rows: ";
-  ss << in.rows << " cols: " << in.cols;
-  imgFDEBUG(ss.str(), 0);
-
-  if(SHOWSEGMENTS){
-    imshow("Whole Image", in);
-  }
+  // Assert Correct Imgsize and Cropsize //
+    assert(NumSegmentsTotal == 6);
+    assert(cropsize == 70);
 
   int segmentCounter = 0; // Track current segment number(position)
 
-  // Extract the maximum Number of full Segments from the image
-  for(int i=0;i<(in.cols-cropsize);i+=(cropsize-overlap)){
-    for(int j=rowspace;j<(in.rows-cropsize);j+=cropsize){
+  // Extract the maximum Number of full Segments from the image //
+    // Calculate the offset gap to centre segments
+    int colspace = (in.cols -(NumColSegments*cropsize))/2;
+    int rowspace = (in.rows -(NumRowSegments*cropsize))/2;
 
-      // If MISSTOPLEFT_RIGHT flag == true and segment is top left or top right continue
-      if(MISSTOPLEFT_RIGHT==1 && (segmentCounter==0 || segmentCounter==4) && NumSegmentsTotal==6){
+    // Loop through extracting segments from the input image
+    for(int i=colspace;i<(in.cols-cropsize);i+=cropsize){
+      for(int j=rowspace;j<(in.rows-cropsize);j+=cropsize){
+
+        // Miss top right and left segments to increase running speed //
+          if((segmentCounter==0 || segmentCounter==4) && NumSegmentsTotal==6){
+            segmentCounter++; // Iterate segment counter
+            continue;
+          }
+
+        Mat tmp = Mat::zeros(cropsize,cropsize,CV_32FC1); // Initialise tmp Mat
+        Mat normImg = in(Rect(i, j, cropsize, cropsize)); // Store segment in Mat
+
+        tmp = reshapeCol(normImg); // Flatten Mat for clustering
+        out.push_back(tmp);
         segmentCounter++; // Iterate segment counter
-        continue;
-      }
 
-      Mat tmp = Mat::zeros(cropsize,cropsize,CV_32FC1);
-      Mat normImg = in(Rect(i, j, cropsize, cropsize));
-      if(SHOWSEGMENTS){
-       imshow("SegImg", normImg);
-       cout << "Press any key to change segment." << endl;
-       waitKey(0);
+        // If show Segments flag is true display
+        if(SHOWSEGMENTS){
+         imshow("SegImg", normImg);
+         cout << "Press any key to change segment." << endl;
+         waitKey(0);
+        }
       }
-      tmp = reshapeCol(normImg);
-      out.push_back(tmp);
-      segmentCounter++; // Iterate segment counter
     }
 
-  }
-  ss.str("");
-  ss << "This is the number of segments: " << out.size() << " and the average cols: " << out[0].cols;
-  imgFDEBUG(ss.str(), 0);
+  // Clear ss and print details if debug is true //
+    ss.str("");
+    ss << "This is the number of segments: " << out.size() << " and the average cols: " << out[0].cols;
+    imgFDEBUG(ss.str(), 0);
 }
 
 void textonFind(Mat& clus, Mat dictionary, vector<double>& disVec){
